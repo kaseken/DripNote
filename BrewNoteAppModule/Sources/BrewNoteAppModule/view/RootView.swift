@@ -10,6 +10,17 @@ public struct RootView: View {
     public init() {}
 
     public var body: some View {
-        RecipeScreen(onMenuTapped: { path.append(.recipeList) })
+        NavigationStack(path: $path) {
+            VStack {
+                RecipeScreen(onMenuTapped: { path.append(.recipeList) })
+                Spacer()
+            }
+            .navigationDestination(for: NavigationPath.self) { path in
+                switch path {
+                case .recipeList:
+                    RecipeListScreen(path: $path)
+                }
+            }
+        }
     }
 }

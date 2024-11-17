@@ -24,15 +24,11 @@ struct RecipeScreen: View {
                         Spacer().frame(width: 16.0)
                     }
                 }
-                Spacer()
-                Text("RecipeScreen")
-                Spacer()
+                ScrollView {
+                    Text("RecipeScreen")
+                }
             }
-            .frame(
-                maxWidth: .infinity,
-                maxHeight: .infinity
-            )
-            .background(Color.backgroundColor)
+            .background(Color.backgroundBeige)
         }
     }
 }
