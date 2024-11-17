@@ -13,7 +13,7 @@ struct Header<Content: View>: View {
         }
         .frame(height: 48.0)
         .frame(maxWidth: .infinity)
-        .background(Color.backgroundColor)
+        .background(Color.backgroundBeige)
         .overlay(
             Rectangle()
                 .frame(height: 1)

@@ -15,9 +15,12 @@ public struct RootView: View {
                 RecipeScreen(onMenuTapped: { path.append(.recipeList) })
                 Spacer()
             }
-        }
-        .navigationDestination(for: NavigationPath.self) { _ in
-            RecipeListScreen()
+            .navigationDestination(for: NavigationPath.self) { path in
+                switch path {
+                case .recipeList:
+                    RecipeListScreen(path: $path)
+                }
+            }
         }
     }
 }

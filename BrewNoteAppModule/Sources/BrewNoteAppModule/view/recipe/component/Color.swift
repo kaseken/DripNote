@@ -6,7 +6,7 @@ struct Color {
     }
 
     // White
-    static let backgroundColor = Self.rgb(247, 246, 242) // #F7F6F2
+    static let backgroundBeige = Self.rgb(247, 246, 242) // #F7F6F2
 
     // Beige
     static let themeBeigeLight = Self.rgb(240, 229, 207) // #F0E5CF
