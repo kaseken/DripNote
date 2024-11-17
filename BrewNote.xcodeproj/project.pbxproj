@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3052FCEB2CE9D39A005AF33D /* BrewNoteAppModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3052FCA82CE9B2CB005AF33D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		3052FC942CE9B2CA005AF33D /* BrewNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3052FCA72CE9B2CB005AF33D /* BrewNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3052FCB12CE9B2CB005AF33D /* BrewNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3052FCE82CE9C5D9005AF33D /* BrewNoteAppModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BrewNoteAppModule; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3052FCEB2CE9D39A005AF33D /* BrewNoteAppModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 		3052FC8B2CE9B2CA005AF33D = {
 			isa = PBXGroup;
 			children = (
+				3052FCE82CE9C5D9005AF33D /* BrewNoteAppModule */,
 				3052FC962CE9B2CA005AF33D /* BrewNote */,
 				3052FCAA2CE9B2CB005AF33D /* BrewNoteTests */,
 				3052FCB42CE9B2CB005AF33D /* BrewNoteUITests */,
@@ -112,6 +119,7 @@
 			);
 			name = BrewNote;
 			packageProductDependencies = (
+				3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */,
 			);
 			productName = BrewNote;
 			productReference = 3052FC942CE9B2CA005AF33D /* BrewNote.app */;
@@ -195,6 +203,9 @@
 			);
 			mainGroup = 3052FC8B2CE9B2CA005AF33D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3052FCE92CE9D39A005AF33D /* XCLocalSwiftPackageReference "BrewNoteAppModule" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3052FC952CE9B2CA005AF33D /* Products */;
 			projectDirPath = "";
@@ -391,7 +402,6 @@
 				CODE_SIGN_ENTITLEMENTS = BrewNote/BrewNote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BrewNote/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BrewNote;
@@ -431,7 +441,6 @@
 				CODE_SIGN_ENTITLEMENTS = BrewNote/BrewNote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"BrewNote/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BrewNote;
@@ -589,6 +598,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		3052FCE92CE9D39A005AF33D /* XCLocalSwiftPackageReference "BrewNoteAppModule" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = BrewNoteAppModule;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BrewNoteAppModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3052FC8C2CE9B2CA005AF33D /* Project object */;
 }

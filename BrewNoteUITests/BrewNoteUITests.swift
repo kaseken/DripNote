@@ -1,10 +1,3 @@
-//
-//  BrewNoteUITests.swift
-//  BrewNoteUITests
-//
-//  Created by Kent Kaseda on 2024/11/17.
-//
-
 import XCTest
 
 final class BrewNoteUITests: XCTestCase {
