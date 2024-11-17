@@ -5,15 +5,15 @@ struct RecipeTimer: View {
 
     let text: String
     let size: CGFloat
-    let activeRatio: Double
+    let progress: Double
 
     init(text: String,
          size: CGFloat,
-         activeRatio: Double = 1.0)
+         progress: Double = 1.0)
     {
         self.text = text
         self.size = size
-        self.activeRatio = activeRatio
+        self.progress = min(max(progress, 0.0), 1.0)
     }
 
     var body: some View {
@@ -25,7 +25,7 @@ struct RecipeTimer: View {
                 )
                 .frame(width: size, height: size)
             Circle()
-                .trim(from: 0.0, to: activeRatio)
+                .trim(from: 0.0, to: progress)
                 .stroke(
                     Color.themeGray,
                     lineWidth: Self.barWidth
@@ -34,6 +34,7 @@ struct RecipeTimer: View {
                 .rotationEffect(.degrees(-90))
             // TODO: Define typography.
             Text(text)
+                .font(.system(size: 16.0))
                 .foregroundStyle(Color.grayText)
                 .fontWeight(.bold)
         }
@@ -43,9 +44,9 @@ struct RecipeTimer: View {
 
 #Preview {
     VStack(spacing: 16.0) {
-        RecipeTimer(text: "20", size: 64.0, activeRatio: 0.0)
-        RecipeTimer(text: "20", size: 64.0, activeRatio: 0.2)
-        RecipeTimer(text: "20", size: 64.0, activeRatio: 0.8)
-        RecipeTimer(text: "20", size: 64.0, activeRatio: 1.0)
+        RecipeTimer(text: "20", size: 64.0, progress: 0.0)
+        RecipeTimer(text: "20", size: 64.0, progress: 0.2)
+        RecipeTimer(text: "20", size: 64.0, progress: 0.8)
+        RecipeTimer(text: "20", size: 64.0, progress: 1.0)
     }
 }
