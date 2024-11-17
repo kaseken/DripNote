@@ -1,14 +1,6 @@
-//
-//  BrewNoteUITests.swift
-//  BrewNoteUITests
-//
-//  Created by Kent Kaseda on 2024/11/17.
-//
-
 import XCTest
 
 final class BrewNoteUITests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
