@@ -28,10 +28,6 @@ struct RecipeScreen: View {
                 Text("RecipeScreen")
                 Spacer()
             }
-            .frame(
-                maxWidth: .infinity,
-                maxHeight: .infinity
-            )
             .background(Color.backgroundColor)
         }
     }
