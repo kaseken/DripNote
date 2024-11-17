@@ -5,8 +5,8 @@ protocol MyRecipeRepository {
 }
 
 struct MyRecipeRepositoryImpl: MyRecipeRepository {
-    // Return default recipes.
+    // TODO: Return recipes from DB.
     func getRecipes() async throws -> [Recipe] {
-        return []
+        return [kDefaultRecipe]
     }
 }
