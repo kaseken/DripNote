@@ -1,0 +1,73 @@
+name: BrewNote
+options:
+  bundleIdPrefix: dev.kaseken.BrewNote
+  deploymentTarget:
+    iOS: '17.0'
+  developmentLanguage: en
+
+settings:
+  base:
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+    SWIFT_VERSION: "5.0"
+  configurations:
+    Debug:
+      GCC_OPTIMIZATION_LEVEL: 0
+    Release:
+      GCC_OPTIMIZATION_LEVEL: s
+
+targets:
+  BrewNote:
+    type: application
+    platform: iOS
+    sources:
+      - BrewNote
+    resources:
+      - BrewNote/Assets.xcassets
+      - BrewNote/Base.lproj
+    dependencies: []
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.kaseken.BrewNote
+      configurations:
+        Debug:
+          ENABLE_TESTABILITY: YES
+        Release:
+          SWIFT_OPTIMIZATION_LEVEL: "-Owholemodule"
+
+  BrewNoteTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - BrewNoteTests
+    dependencies:
+      - target: BrewNote
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.kaseken.BrewNote.tests
+
+  BrewNoteUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - BrewNoteUITests
+    dependencies:
+      - target: BrewNote
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.kaseken.BrewNote.uitests
+
+schemes:
+  BrewNote:
+    build:
+      targets:
+        BrewNote: all
+        BrewNoteTests: test
+        BrewNoteUITests: test
+    run:
+      configuration: Debug
+    test:
+      configurations:
+        - Debug
+    archive:
+      configuration: Release
