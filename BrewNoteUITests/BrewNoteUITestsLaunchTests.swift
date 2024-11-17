@@ -1,7 +1,6 @@
 import XCTest
 
 final class BrewNoteUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

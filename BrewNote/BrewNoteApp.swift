@@ -1,6 +1,6 @@
-import SwiftUI
-import SwiftData
 import BrewNoteAppModule
+import SwiftData
+import SwiftUI
 
 @main
 struct BrewNoteApp: App {

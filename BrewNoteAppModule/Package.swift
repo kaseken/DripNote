@@ -7,12 +7,13 @@ let package = Package(
     name: "BrewNoteAppModule",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v17)
+        .iOS(.v17),
     ],
     products: [
         .library(
             name: "BrewNoteAppModule",
-            targets: ["BrewNoteAppModule"]),
+            targets: ["BrewNoteAppModule"]
+        ),
     ],
     targets: [
         .target(
