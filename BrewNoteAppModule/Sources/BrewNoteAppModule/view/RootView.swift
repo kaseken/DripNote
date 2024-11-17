@@ -1,19 +1,19 @@
 import SwiftUI
 
-enum NavigationDestination {
+enum NavigationPath: Hashable {
     case recipeList
 }
 
 public struct RootView: View {
-    @State private var path = NavigationPath()
+    @State private var path: [NavigationPath] = []
 
     public init() {}
 
     public var body: some View {
         NavigationStack(path: $path) {
-            RecipeScreen()
+            RecipeScreen(onMenuTapped: { path.append(.recipeList) })
         }
-        .navigationDestination(for: NavigationDestination.self) { destination in
+        .navigationDestination(for: NavigationPath.self) { destination in
             switch destination {
             case .recipeList:
                 RecipeListScreen()
