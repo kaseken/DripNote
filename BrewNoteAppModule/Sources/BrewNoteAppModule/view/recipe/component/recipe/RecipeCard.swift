@@ -14,11 +14,11 @@ struct RecipeCard: View {
             )
             .padding(16.0)
             // TODO: Define typography.
-            Text(test)
-                .font(.system(size: 16.0))
-                .fontWeight(.regular)
-                .foregroundStyle(Color.grayText)
-                .lineSpacing(4.0)
+//            Text(test)
+//                .font(.system(size: 16.0))
+//                .fontWeight(.regular)
+//                .foregroundStyle(Color.grayText)
+//                .lineSpacing(4.0)
             Spacer()
         }
         .frame(minHeight: 96)
