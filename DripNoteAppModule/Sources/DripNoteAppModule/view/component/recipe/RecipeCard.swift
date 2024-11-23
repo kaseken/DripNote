@@ -1,18 +1,38 @@
 import SwiftUI
 
-struct RecipeCardData {
-    let text: String
+enum RecipeCardState {
+    case waiting(text: String, timerTotal: Second)
+    case running(text: String, timerCurrent: Second, timerTotal: Second)
+    case complete(text: String)
+
+    var timerState: RecipeTimerState {
+        return switch self {
+        case let .waiting(_, total):
+            .waiting(seconds: total)
+        case let .running(_, current, total):
+            .running(seconds: current,
+                     progress: Double(total.value - current.value) / Double(total.value))
+        case .complete: .complete
+        }
+    }
+
+    var text: String {
+        return switch self {
+        case let .waiting(text, _): text
+        case let .running(text, _, _): text
+        case let .complete(text): text
+        }
+    }
 }
 
 struct RecipeCard: View {
-    let text: String
-    let timerState: RecipeTimerState
+    let state: RecipeCardState
 
     var body: some View {
         HStack(alignment: .center, spacing: 8.0) {
-            RecipeTimer(state: timerState, size: 64.0).padding(16.0)
+            RecipeTimer(state: state.timerState, size: 64.0).padding(16.0)
             // TODO: Define typography.
-            Text(text)
+            Text(state.text)
                 .font(.system(size: 16.0))
                 .fontWeight(.regular)
                 .foregroundStyle(Color.grayText)
@@ -42,8 +62,7 @@ struct RecipeCardConnector: View {
     VStack(spacing: 0) {
         Spacer()
         RecipeCard(
-            text: "20秒間かけて\n湯を40g注ぎましょう",
-            timerState: .complete
+            state: .complete(text: "20秒間かけて\n湯を40g注ぎましょう")
         )
         .padding(.horizontal, 16.0)
         RecipeCardConnector(
@@ -52,8 +71,11 @@ struct RecipeCardConnector: View {
             height: 16.0
         )
         RecipeCard(
-            text: "20秒間待ちましょう",
-            timerState: .running(seconds: Second(16), progress: 4.0 / 20.0)
+            state: .running(
+                text: "20秒間待ちましょう",
+                timerCurrent: Second(16),
+                timerTotal: Second(20)
+            )
         )
         .padding(.horizontal, 16.0)
         RecipeCardConnector(
@@ -62,8 +84,10 @@ struct RecipeCardConnector: View {
             height: 16.0
         )
         RecipeCard(
-            text: "全量が100gになるまで\n20秒間かけて\n湯を60g注ぎましょう",
-            timerState: .waiting(seconds: Second(20))
+            state: .waiting(
+                text: "全量が100gになるまで\n20秒間かけて\n湯を60g注ぎましょう",
+                timerTotal: Second(20)
+            )
         )
         .padding(.horizontal, 16.0)
         Spacer()
