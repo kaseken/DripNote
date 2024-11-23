@@ -25,7 +25,7 @@ struct Recipe {
 }
 
 enum RecipeStep {
-    case drip(waterWeight: Gram, timeSeconds: Second)
+    case drip(water: Gram, seconds: Second)
     case wait(for: Second)
     case waitUntilDripped
 }
@@ -36,13 +36,13 @@ let kDefaultRecipe = Recipe(
     miscellaneous: "",
     beanWeight: Gram(13),
     steps: [
-        .drip(waterWeight: Gram(40), timeSeconds: Second(20)),
+        .drip(water: Gram(40), seconds: Second(20)),
         .wait(for: Second(20)),
-        .drip(waterWeight: Gram(60), timeSeconds: Second(20)),
+        .drip(water: Gram(60), seconds: Second(20)),
         .wait(for: Second(15)),
-        .drip(waterWeight: Gram(50), timeSeconds: Second(20)),
+        .drip(water: Gram(50), seconds: Second(20)),
         .wait(for: Second(15)),
-        .drip(waterWeight: Gram(50), timeSeconds: Second(20)),
+        .drip(water: Gram(50), seconds: Second(20)),
         .waitUntilDripped,
     ],
     // Sunday, November 17, 2024 8:32:50 AM
