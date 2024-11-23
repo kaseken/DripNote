@@ -1,12 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "RecipeListScreen" : {
-
-    },
-    "RecipeScreen" : {
-
-    },
     "step_pour" : {
       "extractionState" : "manual",
       "localizations" : {

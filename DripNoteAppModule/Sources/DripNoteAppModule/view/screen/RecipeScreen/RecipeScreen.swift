@@ -24,9 +24,7 @@ struct RecipeScreen: View {
                         Spacer().frame(width: 16.0)
                     }
                 }
-                ScrollView {
-                    Text("RecipeScreen")
-                }
+                ScrollView {}
             }
             .background(Color.backgroundBeige)
         }

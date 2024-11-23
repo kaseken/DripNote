@@ -4,7 +4,13 @@ import Testing
 struct RecipeLabelsTest {
     @Test
     func stepPour() async throws {
-        let result = RecipeLabels.stepPour(water: Gram(60), seconds: Second(20))
-        #expect(result == "Pour 60g of hot water in 20 seconds.")
+        #expect(RecipeLabels.stepPour(water: Gram(60), seconds: Second(20)) ==
+            "Pour 60g of hot water in 20 seconds.")
+    }
+
+    @Test
+    func stepWait() async throws {
+        #expect(RecipeLabels.stepWait(seconds: Second(1)) == "Wait for 1 second.")
+        #expect(RecipeLabels.stepWait(seconds: Second(2)) == "Wait for 2 seconds.")
     }
 }

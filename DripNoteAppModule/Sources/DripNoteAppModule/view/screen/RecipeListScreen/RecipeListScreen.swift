@@ -18,9 +18,7 @@ struct RecipeListScreen: View {
                     Spacer()
                 }
             }
-            ScrollView {
-                Text("RecipeListScreen")
-            }
+            ScrollView {}
         }
         .background(Color.backgroundBeige)
         // Hide default back button.

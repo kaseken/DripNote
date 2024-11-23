@@ -8,4 +8,11 @@ enum RecipeLabels {
             seconds.value
         )
     }
+
+    static func stepWait(seconds: Second) -> String {
+        String(
+            format: String(localized: "step_wait", bundle: Bundle.module),
+            seconds.value
+        )
+    }
 }
