@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "618BB082-D738-47C9-A358-664E67182FDB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "en"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "DripNoteAppModuleTests",
+        "name" : "DripNoteAppModuleTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -32,6 +32,7 @@
 		3052FCA72CE9B2CB005AF33D /* DripNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DripNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3052FCB12CE9B2CB005AF33D /* DripNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DripNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3052FCE82CE9C5D9005AF33D /* DripNoteAppModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DripNoteAppModule; sourceTree = "<group>"; };
+		309423142CF2097D0071C0AB /* DripNoteAppModuleTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = DripNoteAppModuleTests.xctestplan; path = DripNoteAppModule/DripNoteAppModuleTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +82,7 @@
 		3052FC8B2CE9B2CA005AF33D = {
 			isa = PBXGroup;
 			children = (
+				309423142CF2097D0071C0AB /* DripNoteAppModuleTests.xctestplan */,
 				3052FCE82CE9C5D9005AF33D /* DripNoteAppModule */,
 				3052FC962CE9B2CA005AF33D /* DripNote */,
 				3052FCAA2CE9B2CB005AF33D /* DripNoteTests */,
@@ -427,7 +429,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
@@ -466,7 +468,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
