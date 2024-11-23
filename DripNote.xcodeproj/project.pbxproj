@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3052FCEB2CE9D39A005AF33D /* BrewNoteAppModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */; };
+		30764E0C2CF1AA0500E872EE /* DripNoteAppModule in Frameworks */ = {isa = PBXBuildFile; productRef = 30764E0B2CF1AA0500E872EE /* DripNoteAppModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -16,38 +16,38 @@
 			containerPortal = 3052FC8C2CE9B2CA005AF33D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3052FC932CE9B2CA005AF33D;
-			remoteInfo = BrewNote;
+			remoteInfo = DripNote;
 		};
 		3052FCB22CE9B2CB005AF33D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3052FC8C2CE9B2CA005AF33D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3052FC932CE9B2CA005AF33D;
-			remoteInfo = BrewNote;
+			remoteInfo = DripNote;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3052FC942CE9B2CA005AF33D /* BrewNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3052FCA72CE9B2CB005AF33D /* BrewNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3052FCB12CE9B2CB005AF33D /* BrewNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3052FCE82CE9C5D9005AF33D /* BrewNoteAppModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BrewNoteAppModule; sourceTree = "<group>"; };
+		3052FC942CE9B2CA005AF33D /* DripNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DripNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3052FCA72CE9B2CB005AF33D /* DripNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DripNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3052FCB12CE9B2CB005AF33D /* DripNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DripNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3052FCE82CE9C5D9005AF33D /* DripNoteAppModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DripNoteAppModule; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3052FC962CE9B2CA005AF33D /* BrewNote */ = {
+		3052FC962CE9B2CA005AF33D /* DripNote */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BrewNote;
+			path = DripNote;
 			sourceTree = "<group>";
 		};
-		3052FCAA2CE9B2CB005AF33D /* BrewNoteTests */ = {
+		3052FCAA2CE9B2CB005AF33D /* DripNoteTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BrewNoteTests;
+			path = DripNoteTests;
 			sourceTree = "<group>";
 		};
-		3052FCB42CE9B2CB005AF33D /* BrewNoteUITests */ = {
+		3052FCB42CE9B2CB005AF33D /* DripNoteUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BrewNoteUITests;
+			path = DripNoteUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3052FCEB2CE9D39A005AF33D /* BrewNoteAppModule in Frameworks */,
+				30764E0C2CF1AA0500E872EE /* DripNoteAppModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +81,10 @@
 		3052FC8B2CE9B2CA005AF33D = {
 			isa = PBXGroup;
 			children = (
-				3052FCE82CE9C5D9005AF33D /* BrewNoteAppModule */,
-				3052FC962CE9B2CA005AF33D /* BrewNote */,
-				3052FCAA2CE9B2CB005AF33D /* BrewNoteTests */,
-				3052FCB42CE9B2CB005AF33D /* BrewNoteUITests */,
+				3052FCE82CE9C5D9005AF33D /* DripNoteAppModule */,
+				3052FC962CE9B2CA005AF33D /* DripNote */,
+				3052FCAA2CE9B2CB005AF33D /* DripNoteTests */,
+				3052FCB42CE9B2CB005AF33D /* DripNoteUITests */,
 				3052FC952CE9B2CA005AF33D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,9 +92,9 @@
 		3052FC952CE9B2CA005AF33D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3052FC942CE9B2CA005AF33D /* BrewNote.app */,
-				3052FCA72CE9B2CB005AF33D /* BrewNoteTests.xctest */,
-				3052FCB12CE9B2CB005AF33D /* BrewNoteUITests.xctest */,
+				3052FC942CE9B2CA005AF33D /* DripNote.app */,
+				3052FCA72CE9B2CB005AF33D /* DripNoteTests.xctest */,
+				3052FCB12CE9B2CB005AF33D /* DripNoteUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3052FC932CE9B2CA005AF33D /* BrewNote */ = {
+		3052FC932CE9B2CA005AF33D /* DripNote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3052FCBB2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNote" */;
+			buildConfigurationList = 3052FCBB2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNote" */;
 			buildPhases = (
 				3052FC902CE9B2CA005AF33D /* Sources */,
 				3052FC912CE9B2CA005AF33D /* Frameworks */,
@@ -115,19 +115,19 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3052FC962CE9B2CA005AF33D /* BrewNote */,
+				3052FC962CE9B2CA005AF33D /* DripNote */,
 			);
-			name = BrewNote;
+			name = DripNote;
 			packageProductDependencies = (
-				3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */,
+				30764E0B2CF1AA0500E872EE /* DripNoteAppModule */,
 			);
-			productName = BrewNote;
-			productReference = 3052FC942CE9B2CA005AF33D /* BrewNote.app */;
+			productName = DripNote;
+			productReference = 3052FC942CE9B2CA005AF33D /* DripNote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3052FCA62CE9B2CB005AF33D /* BrewNoteTests */ = {
+		3052FCA62CE9B2CB005AF33D /* DripNoteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3052FCBE2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNoteTests" */;
+			buildConfigurationList = 3052FCBE2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNoteTests" */;
 			buildPhases = (
 				3052FCA32CE9B2CB005AF33D /* Sources */,
 				3052FCA42CE9B2CB005AF33D /* Frameworks */,
@@ -139,18 +139,18 @@
 				3052FCA92CE9B2CB005AF33D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				3052FCAA2CE9B2CB005AF33D /* BrewNoteTests */,
+				3052FCAA2CE9B2CB005AF33D /* DripNoteTests */,
 			);
-			name = BrewNoteTests;
+			name = DripNoteTests;
 			packageProductDependencies = (
 			);
-			productName = BrewNoteTests;
-			productReference = 3052FCA72CE9B2CB005AF33D /* BrewNoteTests.xctest */;
+			productName = DripNoteTests;
+			productReference = 3052FCA72CE9B2CB005AF33D /* DripNoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3052FCB02CE9B2CB005AF33D /* BrewNoteUITests */ = {
+		3052FCB02CE9B2CB005AF33D /* DripNoteUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3052FCC12CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNoteUITests" */;
+			buildConfigurationList = 3052FCC12CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNoteUITests" */;
 			buildPhases = (
 				3052FCAD2CE9B2CB005AF33D /* Sources */,
 				3052FCAE2CE9B2CB005AF33D /* Frameworks */,
@@ -162,13 +162,13 @@
 				3052FCB32CE9B2CB005AF33D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				3052FCB42CE9B2CB005AF33D /* BrewNoteUITests */,
+				3052FCB42CE9B2CB005AF33D /* DripNoteUITests */,
 			);
-			name = BrewNoteUITests;
+			name = DripNoteUITests;
 			packageProductDependencies = (
 			);
-			productName = BrewNoteUITests;
-			productReference = 3052FCB12CE9B2CB005AF33D /* BrewNoteUITests.xctest */;
+			productName = DripNoteUITests;
+			productReference = 3052FCB12CE9B2CB005AF33D /* DripNoteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3052FC8F2CE9B2CA005AF33D /* Build configuration list for PBXProject "BrewNote" */;
+			buildConfigurationList = 3052FC8F2CE9B2CA005AF33D /* Build configuration list for PBXProject "DripNote" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -204,16 +204,16 @@
 			mainGroup = 3052FC8B2CE9B2CA005AF33D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				3052FCE92CE9D39A005AF33D /* XCLocalSwiftPackageReference "BrewNoteAppModule" */,
+				30764E0A2CF1AA0500E872EE /* XCLocalSwiftPackageReference "DripNoteAppModule" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3052FC952CE9B2CA005AF33D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3052FC932CE9B2CA005AF33D /* BrewNote */,
-				3052FCA62CE9B2CB005AF33D /* BrewNoteTests */,
-				3052FCB02CE9B2CB005AF33D /* BrewNoteUITests */,
+				3052FC932CE9B2CA005AF33D /* DripNote */,
+				3052FCA62CE9B2CB005AF33D /* DripNoteTests */,
+				3052FCB02CE9B2CB005AF33D /* DripNoteUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,12 +269,12 @@
 /* Begin PBXTargetDependency section */
 		3052FCA92CE9B2CB005AF33D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3052FC932CE9B2CA005AF33D /* BrewNote */;
+			target = 3052FC932CE9B2CA005AF33D /* DripNote */;
 			targetProxy = 3052FCA82CE9B2CB005AF33D /* PBXContainerItemProxy */;
 		};
 		3052FCB32CE9B2CB005AF33D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3052FC932CE9B2CA005AF33D /* BrewNote */;
+			target = 3052FC932CE9B2CA005AF33D /* DripNote */;
 			targetProxy = 3052FCB22CE9B2CB005AF33D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,12 +399,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BrewNote/BrewNote.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DripNote/DripNote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = BrewNote;
+				INFOPLIST_KEY_CFBundleDisplayName = DripNote;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -421,7 +421,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNote;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -438,12 +438,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BrewNote/BrewNote.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DripNote/DripNote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = BrewNote;
+				INFOPLIST_KEY_CFBundleDisplayName = DripNote;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -460,7 +460,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNote;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -482,14 +482,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNoteTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BrewNote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DripNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DripNote";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -504,14 +504,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNoteTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrewNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BrewNote";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DripNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DripNote";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -525,14 +525,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNoteUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNoteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = BrewNote;
+				TEST_TARGET_NAME = DripNote;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -546,14 +546,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MACOSX_DEPLOYMENT_TARGET = 15.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.BrewNoteUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.kaseken.DripNoteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_TARGET_NAME = BrewNote;
+				TEST_TARGET_NAME = DripNote;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -561,7 +561,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3052FC8F2CE9B2CA005AF33D /* Build configuration list for PBXProject "BrewNote" */ = {
+		3052FC8F2CE9B2CA005AF33D /* Build configuration list for PBXProject "DripNote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3052FCB92CE9B2CB005AF33D /* Debug */,
@@ -570,7 +570,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3052FCBB2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNote" */ = {
+		3052FCBB2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3052FCBC2CE9B2CB005AF33D /* Debug */,
@@ -579,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3052FCBE2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNoteTests" */ = {
+		3052FCBE2CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNoteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3052FCBF2CE9B2CB005AF33D /* Debug */,
@@ -588,7 +588,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3052FCC12CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "BrewNoteUITests" */ = {
+		3052FCC12CE9B2CB005AF33D /* Build configuration list for PBXNativeTarget "DripNoteUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3052FCC22CE9B2CB005AF33D /* Debug */,
@@ -600,16 +600,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		3052FCE92CE9D39A005AF33D /* XCLocalSwiftPackageReference "BrewNoteAppModule" */ = {
+		30764E0A2CF1AA0500E872EE /* XCLocalSwiftPackageReference "DripNoteAppModule" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = BrewNoteAppModule;
+			relativePath = DripNoteAppModule;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3052FCEA2CE9D39A005AF33D /* BrewNoteAppModule */ = {
+		30764E0B2CF1AA0500E872EE /* DripNoteAppModule */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = BrewNoteAppModule;
+			productName = DripNoteAppModule;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

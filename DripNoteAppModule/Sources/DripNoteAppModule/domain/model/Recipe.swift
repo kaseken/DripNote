@@ -32,7 +32,7 @@ enum RecipeStep {
 
 let kDefaultRecipe = Recipe(
     id: "1",
-    name: "BrewNote's Recipe",
+    name: "DripNote's Recipe",
     miscellaneous: "",
     beanWeight: Gram(13),
     steps: [

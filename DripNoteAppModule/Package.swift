@@ -4,23 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "BrewNoteAppModule",
+    name: "DripNoteAppModule",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v17),
     ],
     products: [
         .library(
-            name: "BrewNoteAppModule",
-            targets: ["BrewNoteAppModule"]
+            name: "DripNoteAppModule",
+            targets: ["DripNoteAppModule"]
         ),
     ],
     targets: [
         .target(
-            name: "BrewNoteAppModule"),
+            name: "DripNoteAppModule"),
         .testTarget(
-            name: "BrewNoteAppModuleTests",
-            dependencies: ["BrewNoteAppModule"]
+            name: "DripNoteAppModuleTests",
+            dependencies: ["DripNoteAppModule"]
         ),
     ]
 )

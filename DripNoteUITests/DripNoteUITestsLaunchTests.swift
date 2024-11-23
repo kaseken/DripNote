@@ -1,6 +1,6 @@
 import XCTest
 
-final class BrewNoteUITestsLaunchTests: XCTestCase {
+final class DripNoteUITestsLaunchTests: XCTestCase {
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
