@@ -16,8 +16,7 @@ let package = Package(
         ),
     ],
     targets: [
-        .target(
-            name: "DripNoteAppModule"),
+        .target(name: "DripNoteAppModule"),
         .testTarget(
             name: "DripNoteAppModuleTests",
             dependencies: ["DripNoteAppModule"]
