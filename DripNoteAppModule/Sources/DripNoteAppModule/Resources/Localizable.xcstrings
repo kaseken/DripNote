@@ -145,6 +145,23 @@
           }
         }
       }
+    },
+    "step_wait_until_end" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wait until all the water has dripped through."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "湯が落ち切るまで待ちましょう。"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

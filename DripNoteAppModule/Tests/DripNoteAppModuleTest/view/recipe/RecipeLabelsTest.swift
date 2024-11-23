@@ -23,4 +23,10 @@ struct RecipeLabelsTest {
         #expect(RecipeLabels.stepWait(seconds: Second(1)) == "Wait for 1 second.")
         #expect(RecipeLabels.stepWait(seconds: Second(2)) == "Wait for 2 seconds.")
     }
+
+    @Test
+    func stepWaitUntilEnd() async throws {
+        #expect(RecipeLabels.stepWaitUntilEnd() ==
+            "Wait until all the water has dripped through.")
+    }
 }

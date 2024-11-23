@@ -24,4 +24,8 @@ enum RecipeLabels {
             seconds.value
         )
     }
+
+    static func stepWaitUntilEnd() -> String {
+        String(format: String(localized: "step_wait_until_end", bundle: Bundle.module))
+    }
 }
