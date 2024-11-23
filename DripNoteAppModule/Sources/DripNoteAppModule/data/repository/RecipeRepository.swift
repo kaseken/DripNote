@@ -1,10 +1,10 @@
 import Foundation
 
-protocol MyRecipeRepository {
+protocol RecipeRepository {
     func getRecipes() async throws -> [Recipe]
 }
 
-struct MyRecipeRepositoryImpl: MyRecipeRepository {
+struct RecipeRepositoryImpl: RecipeRepository {
     // TODO: Return recipes from DB.
     func getRecipes() async throws -> [Recipe] {
         return [kDefaultRecipe]
