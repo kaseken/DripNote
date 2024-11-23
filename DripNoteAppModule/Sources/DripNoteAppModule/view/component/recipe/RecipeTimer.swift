@@ -1,20 +1,24 @@
 import SwiftUI
 
+enum RecipeTimerState {
+    case waiting(seconds: Second)
+    case running(seconds: Second, progress: Double)
+    case complete
+
+    func getProgress() -> Double {
+        return switch self {
+        case .waiting: 0.0
+        case let .running(_, progress): progress
+        case .complete: 1.0
+        }
+    }
+}
+
 struct RecipeTimer: View {
     private static let barWidth: CGFloat = 8.0
 
-    let text: String
+    let state: RecipeTimerState
     let size: CGFloat
-    let progress: Double
-
-    init(text: String,
-         size: CGFloat,
-         progress: Double = 1.0)
-    {
-        self.text = text
-        self.size = size
-        self.progress = min(max(progress, 0.0), 1.0)
-    }
 
     var body: some View {
         ZStack(alignment: .center) {
@@ -25,18 +29,29 @@ struct RecipeTimer: View {
                 )
                 .frame(width: size, height: size)
             Circle()
-                .trim(from: 0.0, to: progress)
+                .trim(from: 0.0, to: state.getProgress())
                 .stroke(
                     Color.themeGray,
                     lineWidth: Self.barWidth
                 )
                 .frame(width: size, height: size)
                 .rotationEffect(.degrees(-90))
-            // TODO: Define typography.
-            Text(text)
-                .font(.system(size: 16.0))
-                .foregroundStyle(Color.grayText)
-                .fontWeight(.bold)
+
+            switch state {
+            case let .running(seconds, _):
+                Text(String(seconds.value))
+                    .font(.system(size: 16.0))
+                    .foregroundStyle(Color.grayText)
+                    .fontWeight(.bold)
+            case let .waiting(seconds):
+                Text(String(seconds.value))
+                    .font(.system(size: 16.0))
+                    .foregroundStyle(Color.grayText)
+                    .fontWeight(.bold)
+            case .complete:
+                // TODO: Show checkmark.
+                EmptyView()
+            }
         }
         .frame(width: size, height: size)
     }
@@ -44,9 +59,13 @@ struct RecipeTimer: View {
 
 #Preview {
     VStack(spacing: 16.0) {
-        RecipeTimer(text: "20", size: 64.0, progress: 0.0)
-        RecipeTimer(text: "20", size: 64.0, progress: 0.2)
-        RecipeTimer(text: "20", size: 64.0, progress: 0.8)
-        RecipeTimer(text: "20", size: 64.0, progress: 1.0)
+        RecipeTimer(state: .running(seconds: Second(20), progress: 0.0),
+                    size: 64.0)
+        RecipeTimer(state: .running(seconds: Second(20), progress: 0.2),
+                    size: 64.0)
+        RecipeTimer(state: .running(seconds: Second(20), progress: 0.7),
+                    size: 64.0)
+        RecipeTimer(state: .running(seconds: Second(20), progress: 1.0),
+                    size: 64.0)
     }
 }
