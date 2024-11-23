@@ -1,9 +1,9 @@
-import BrewNoteAppModule
+import DripNoteAppModule
 import SwiftData
 import SwiftUI
 
 @main
-struct BrewNoteApp: App {
+struct DripNoteApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
