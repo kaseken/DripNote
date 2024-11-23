@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30764E0C2CF1AA0500E872EE /* DripNoteAppModule in Frameworks */ = {isa = PBXBuildFile; productRef = 30764E0B2CF1AA0500E872EE /* DripNoteAppModule */; };
+		305FA5D32CF1B24D000F8F1F /* DripNoteAppModule in Frameworks */ = {isa = PBXBuildFile; productRef = 305FA5D22CF1B24D000F8F1F /* DripNoteAppModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30764E0C2CF1AA0500E872EE /* DripNoteAppModule in Frameworks */,
+				305FA5D32CF1B24D000F8F1F /* DripNoteAppModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			);
 			name = DripNote;
 			packageProductDependencies = (
-				30764E0B2CF1AA0500E872EE /* DripNoteAppModule */,
+				305FA5D22CF1B24D000F8F1F /* DripNoteAppModule */,
 			);
 			productName = DripNote;
 			productReference = 3052FC942CE9B2CA005AF33D /* DripNote.app */;
@@ -204,7 +204,7 @@
 			mainGroup = 3052FC8B2CE9B2CA005AF33D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				30764E0A2CF1AA0500E872EE /* XCLocalSwiftPackageReference "DripNoteAppModule" */,
+				305FA5D12CF1B24D000F8F1F /* XCLocalSwiftPackageReference "DripNoteAppModule" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3052FC952CE9B2CA005AF33D /* Products */;
@@ -600,14 +600,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		30764E0A2CF1AA0500E872EE /* XCLocalSwiftPackageReference "DripNoteAppModule" */ = {
+		305FA5D12CF1B24D000F8F1F /* XCLocalSwiftPackageReference "DripNoteAppModule" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = DripNoteAppModule;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		30764E0B2CF1AA0500E872EE /* DripNoteAppModule */ = {
+		305FA5D22CF1B24D000F8F1F /* DripNoteAppModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = DripNoteAppModule;
 		};
