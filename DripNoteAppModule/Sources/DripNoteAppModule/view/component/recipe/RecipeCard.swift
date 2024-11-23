@@ -10,8 +10,10 @@ enum RecipeCardState {
         case let .waiting(_, total):
             .waiting(seconds: total)
         case let .running(_, current, total):
-            .running(seconds: current,
-                     progress: Double(total.value - current.value) / Double(total.value))
+            .running(
+                seconds: current,
+                progress: Double(total.value - current.value) / Double(total.value)
+            )
         case .complete: .complete
         }
     }
