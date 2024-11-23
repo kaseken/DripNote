@@ -7,13 +7,51 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pour %1$dg of hot water in %2$d seconds."
+            "value" : "Pour %1$dg of hot water in %#@arg2@."
+          },
+          "substitutions" : {
+            "arg2" : {
+              "argNum" : 2,
+              "formatSpecifier" : "d",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg second"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg seconds"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%2$d秒かけて\\n湯を%1$dg注ぎましょう。"
+            "value" : "%#@arg2@かけて\\n湯を%1$dg注ぎましょう。"
+          },
+          "substitutions" : {
+            "arg2" : {
+              "argNum" : 2,
+              "formatSpecifier" : "d",
+              "variations" : {
+                "plural" : {
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg秒"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }

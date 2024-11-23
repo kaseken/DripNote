@@ -6,6 +6,8 @@ struct RecipeLabelsTest {
     func stepPour() async throws {
         #expect(RecipeLabels.stepPour(water: Gram(60), seconds: Second(20)) ==
             "Pour 60g of hot water in 20 seconds.")
+        #expect(RecipeLabels.stepPour(water: Gram(60), seconds: Second(1)) ==
+            "Pour 60g of hot water in 1 second.")
     }
 
     @Test
