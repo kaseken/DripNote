@@ -1,19 +1,5 @@
 import Foundation
 
-struct Gram {
-    let value: Int
-    init(_ value: Int) {
-        self.value = value
-    }
-}
-
-struct Second {
-    let value: Int
-    init(_ value: Int) {
-        self.value = value
-    }
-}
-
 struct Recipe {
     let id: String
     let name: String
