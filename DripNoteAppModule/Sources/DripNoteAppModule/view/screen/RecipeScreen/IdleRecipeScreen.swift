@@ -30,6 +30,13 @@ struct IdleRecipeScreen: View {
                     VStack(spacing: 0) {
                         ForEach(RecipeConverter.toRecipeCardStates(recipe: recipe)) { recipeCardState in
                             RecipeCard(state: recipeCardState)
+                            if !recipeCardState.isLastStep {
+                                HStack(alignment: .center) {
+                                    Rectangle()
+                                        .foregroundStyle(Color.themeBeigeLight)
+                                        .frame(width: 16.0, height: 16.0)
+                                }
+                            }
                         }
                     }
                     .padding(.horizontal, 16.0)
