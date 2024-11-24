@@ -21,7 +21,15 @@ struct RecipeScreen: View {
                     recipe: recipe,
                     onStartTapped: {},
                     onMenuTapped: onMenuTapped,
+                    // TODO: Open settings.
                     onSettingsTapped: {}
+                )
+            case let .running(recipe, elapsedTime):
+                RunningRecipeScreen(
+                    recipe: recipe,
+                    elapsedTime: elapsedTime,
+                    // TODO: Abort.
+                    onAbortTapped: {}
                 )
             }
         }

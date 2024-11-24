@@ -3,6 +3,7 @@ import Foundation
 enum RecipeScreenUIState {
     case loading
     case idle(recipe: Recipe)
+    case running(recipe: Recipe, elapsedTime: Second)
 }
 
 final class RecipeScreenViewModel: ObservableObject {
