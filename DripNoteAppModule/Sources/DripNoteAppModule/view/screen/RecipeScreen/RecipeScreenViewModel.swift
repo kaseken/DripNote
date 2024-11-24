@@ -8,7 +8,7 @@ enum RecipeScreenUIState {
 }
 
 final class RecipeScreenViewModel: ObservableObject {
-    private var timeElapsed: TimeInterval = 0
+    private var elapsedTime: Second = .init(0)
     private var timer: AnyCancellable?
 
     @Published var uiState: RecipeScreenUIState = .loading
@@ -22,7 +22,7 @@ final class RecipeScreenViewModel: ObservableObject {
     }
 
     private func clearTimer() {
-        timeElapsed = 0
+        elapsedTime = Second(0)
         timer?.cancel()
         timer = nil
     }
@@ -38,8 +38,8 @@ final class RecipeScreenViewModel: ObservableObject {
             .autoconnect()
             .sink { [weak self] _ in
                 guard let self = self else { return }
-                timeElapsed += 1
-                uiState = .running(recipe: recipe, elapsedTime: Second(Int(timeElapsed)))
+                elapsedTime = Second(min(elapsedTime.value + 1, Int.max))
+                uiState = .running(recipe: recipe, elapsedTime: elapsedTime)
             }
         uiState = .running(recipe: recipe, elapsedTime: Second(0))
     }
