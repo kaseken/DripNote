@@ -6,6 +6,7 @@ struct Color {
     }
 
     // White
+    static let white = SwiftUI.Color.white
     static let backgroundWhite = SwiftUI.Color.white
     static let backgroundBeige = Self.rgb(247, 246, 242) // #F7F6F2
 
