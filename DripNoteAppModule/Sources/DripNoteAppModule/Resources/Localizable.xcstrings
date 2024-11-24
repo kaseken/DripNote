@@ -35,7 +35,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%#@arg2@かけて\\n湯を%1$dg注ぎましょう"
+            "value" : "%#@arg2@かけて\n湯を%1$dg注ぎましょう"
           },
           "substitutions" : {
             "arg2" : {
@@ -90,7 +90,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "全量が%3$dgになるまで\\n%#@arg2@間かけて\\n湯を%1$dg注ぎましょう"
+            "value" : "全量が%3$dgになるまで\n%#@arg2@間かけて\n湯を%1$dg注ぎましょう"
           },
           "substitutions" : {
             "arg2" : {
