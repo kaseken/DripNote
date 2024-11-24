@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 
 enum RecipeScreenUIState {
@@ -7,10 +8,23 @@ enum RecipeScreenUIState {
 }
 
 final class RecipeScreenViewModel: ObservableObject {
+    private var timeElapsed: TimeInterval = 0
+    private var timer: AnyCancellable?
+
     @Published var uiState: RecipeScreenUIState = .loading
 
     init() {
         loadRecipe()
+    }
+
+    deinit {
+        clearTimer()
+    }
+
+    private func clearTimer() {
+        timeElapsed = 0
+        timer?.cancel()
+        timer = nil
     }
 
     // TODO: Load recipe from DB.
@@ -20,12 +34,19 @@ final class RecipeScreenViewModel: ObservableObject {
 
     func onStartTapped() {
         guard case let .idle(recipe) = uiState else { return }
-        // TODO: Start timer.
+        timer = Timer.publish(every: 1, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                timeElapsed += 1
+                uiState = .running(recipe: recipe, elapsedTime: Second(Int(timeElapsed)))
+            }
         uiState = .running(recipe: recipe, elapsedTime: Second(0))
     }
 
     func onAbortTapped() {
         guard case let .running(recipe, _) = uiState else { return }
+        clearTimer()
         uiState = .idle(recipe: recipe)
     }
 }
