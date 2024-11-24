@@ -17,4 +17,15 @@ final class RecipeScreenViewModel: ObservableObject {
     private func loadRecipe() {
         uiState = .idle(recipe: kDefaultRecipe)
     }
+
+    func onStartTapped() {
+        guard case let .idle(recipe) = uiState else { return }
+        // TODO: Start timer.
+        uiState = .running(recipe: recipe, elapsedTime: Second(0))
+    }
+
+    func onAbortTapped() {
+        guard case let .running(recipe, _) = uiState else { return }
+        uiState = .idle(recipe: recipe)
+    }
 }
