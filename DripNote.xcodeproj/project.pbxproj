@@ -197,10 +197,11 @@
 				};
 			};
 			buildConfigurationList = 3052FC8F2CE9B2CA005AF33D /* Build configuration list for PBXProject "DripNote" */;
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 				Base,
 			);
 			mainGroup = 3052FC8B2CE9B2CA005AF33D;
