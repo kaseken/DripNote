@@ -35,18 +35,6 @@ struct RecipeCard: View {
     }
 }
 
-struct RecipeCardConnector: View {
-    let color: SwiftUI.Color
-    let width: CGFloat
-    let height: CGFloat
-
-    var body: some View {
-        Rectangle()
-            .fill(color)
-            .frame(width: width, height: height)
-    }
-}
-
 #Preview {
     VStack(spacing: 0) {
         Spacer()
@@ -59,11 +47,7 @@ struct RecipeCardConnector: View {
             )
         )
         .padding(.horizontal, 16.0)
-        RecipeCardConnector(
-            color: Color.themeBeigeLight,
-            width: 12.0,
-            height: 16.0
-        )
+        RecipeCardConnector(previousTimerState: .complete)
         RecipeCard(
             state: RecipeCardState(
                 index: 1,
@@ -74,9 +58,7 @@ struct RecipeCardConnector: View {
         )
         .padding(.horizontal, 16.0)
         RecipeCardConnector(
-            color: Color.themeBeigeLight,
-            width: 12.0,
-            height: 16.0
+            previousTimerState: .running(total: Second(20), current: Second(16))
         )
         RecipeCard(
             state: RecipeCardState(

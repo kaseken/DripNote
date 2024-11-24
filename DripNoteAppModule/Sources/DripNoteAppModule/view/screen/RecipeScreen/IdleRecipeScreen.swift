@@ -32,9 +32,9 @@ struct IdleRecipeScreen: View {
                             RecipeCard(state: recipeCardState)
                             if !recipeCardState.isLastStep {
                                 HStack(alignment: .center) {
-                                    Rectangle()
-                                        .foregroundStyle(Color.themeBeigeLight)
-                                        .frame(width: 16.0, height: 16.0)
+                                    RecipeCardConnector(
+                                        previousTimerState: recipeCardState.timerState
+                                    )
                                 }
                             }
                         }
