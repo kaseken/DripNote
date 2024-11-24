@@ -49,8 +49,7 @@ struct RecipeCard: View {
                 .lineSpacing(4.0)
             Spacer()
         }
-        .frame(minHeight: 96)
-        .frame(width: .infinity)
+        .frame(maxWidth: .infinity, minHeight: 96)
         .background(Color.backgroundWhite)
         .cornerRadius(8.0)
     }

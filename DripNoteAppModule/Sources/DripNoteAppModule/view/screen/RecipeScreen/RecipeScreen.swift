@@ -19,7 +19,9 @@ struct RecipeScreen: View {
             case let .idle(recipe):
                 IdleRecipeScreen(
                     recipe: recipe,
-                    onMenuTapped: onMenuTapped
+                    onStartTapped: {},
+                    onMenuTapped: onMenuTapped,
+                    onSettingsTapped: {}
                 )
             }
         }
