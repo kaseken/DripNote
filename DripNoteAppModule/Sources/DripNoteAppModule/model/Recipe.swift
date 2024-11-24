@@ -3,7 +3,6 @@ import Foundation
 struct Recipe {
     let id: String
     let name: String
-    let miscellaneous: String
     let beanWeight: Gram
     let steps: [RecipeStep]
     let updatedAt: Date
@@ -27,7 +26,6 @@ enum RecipeStep {
 let kDefaultRecipe = Recipe(
     id: "1",
     name: "DripNote's Recipe",
-    miscellaneous: "",
     beanWeight: Gram(13),
     steps: [
         .drip(water: Gram(40), seconds: Second(20)),
