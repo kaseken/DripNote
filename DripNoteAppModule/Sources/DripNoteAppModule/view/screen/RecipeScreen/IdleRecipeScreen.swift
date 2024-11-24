@@ -28,7 +28,12 @@ struct IdleRecipeScreen: View {
             ZStack(alignment: .bottomTrailing) {
                 ScrollView {
                     VStack(spacing: 0) {
-                        ForEach(RecipeConverter.toRecipeCardStates(recipe: recipe)) { recipeCardState in
+                        ForEach(
+                            RecipeConverter.toRecipeCardStates(
+                                recipe: recipe,
+                                currentTime: Second(0)
+                            )
+                        ) { recipeCardState in
                             RecipeCard(state: recipeCardState)
                             if !recipeCardState.isLastStep {
                                 HStack(alignment: .center) {

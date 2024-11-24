@@ -49,8 +49,9 @@ struct RecipeTimer: View {
                     .foregroundStyle(Color.grayText)
                     .fontWeight(.bold)
             case .complete:
-                // TODO: Show checkmark.
-                EmptyView()
+                Image(systemName: "checkmark")
+                    .font(.system(size: 16.0))
+                    .foregroundStyle(Color.grayText)
             }
         }
         .frame(width: size, height: size)
