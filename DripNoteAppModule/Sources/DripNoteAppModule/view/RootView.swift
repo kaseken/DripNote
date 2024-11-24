@@ -11,14 +11,18 @@ public struct RootView: View {
 
     public var body: some View {
         NavigationStack(path: $path) {
-            VStack {
-                RecipeScreen(onMenuTapped: { path.append(.recipeList) })
-                Spacer()
-            }
-            .navigationDestination(for: NavigationPath.self) { path in
-                switch path {
-                case .recipeList:
-                    RecipeListScreen(path: $path)
+            ZStack {
+                // Updates color of safe-area.
+                Color.backgroundBeige.edgesIgnoringSafeArea(.all)
+                VStack {
+                    RecipeScreen(onMenuTapped: { path.append(.recipeList) })
+                    Spacer()
+                }
+                .navigationDestination(for: NavigationPath.self) { path in
+                    switch path {
+                    case .recipeList:
+                        RecipeListScreen(path: $path)
+                    }
                 }
             }
         }
