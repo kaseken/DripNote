@@ -25,7 +25,7 @@ struct IdleRecipeScreen: View {
                     Spacer().frame(width: 16.0)
                 }
             }
-            ZStack {
+            ZStack(alignment: .bottomTrailing) {
                 ScrollView {
                     VStack(spacing: 0) {
                         ForEach(RecipeConverter.toRecipeCardStates(recipe: recipe)) { recipeCardState in
@@ -35,6 +35,16 @@ struct IdleRecipeScreen: View {
                     .padding(.horizontal, 16.0)
                     .padding(.vertical, 16.0)
                 }
+                IconButton(
+                    iconSystemName: "play.fill",
+                    size: 72.0,
+                    foregroundColor: Color.white,
+                    backgroundColor: Color.themeNavyDark,
+                    borderColor: nil,
+                    onClick: onStartTapped
+                )
+                .shadow(radius: 8.0)
+                .padding(.all, 16.0)
             }
         }
         .background(Color.backgroundBeige)

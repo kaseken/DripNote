@@ -6,9 +6,10 @@ struct IconButton: View {
     let foregroundColor: SwiftUI.Color
     let backgroundColor: SwiftUI.Color
     let borderColor: SwiftUI.Color?
+    let onClick: () -> Void
 
     var body: some View {
-        Button(action: {}) {
+        Button(action: onClick) {
             Image(systemName: iconSystemName)
                 .font(.system(size: size / 2))
                 .foregroundStyle(foregroundColor)
@@ -30,14 +31,16 @@ struct IconButton: View {
             size: 72.0,
             foregroundColor: Color.white,
             backgroundColor: Color.themeNavyDark,
-            borderColor: nil
+            borderColor: nil,
+            onClick: {}
         )
         IconButton(
             iconSystemName: "plus",
             size: 72.0,
             foregroundColor: Color.themeNavyDark,
             backgroundColor: Color.white,
-            borderColor: Color.themeNavyDark
+            borderColor: Color.themeNavyDark,
+            onClick: {}
         )
     }
 }
