@@ -19,7 +19,7 @@ struct RecipeScreen: View {
             case let .idle(recipe):
                 IdleRecipeScreen(
                     recipe: recipe,
-                    onStartTapped: {},
+                    onStartTapped: viewModel.onStartTapped,
                     onMenuTapped: onMenuTapped,
                     // TODO: Open settings.
                     onSettingsTapped: {}
@@ -28,8 +28,7 @@ struct RecipeScreen: View {
                 RunningRecipeScreen(
                     recipe: recipe,
                     elapsedTime: elapsedTime,
-                    // TODO: Abort.
-                    onAbortTapped: {}
+                    onAbortTapped: viewModel.onAbortTapped
                 )
             }
         }
