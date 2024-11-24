@@ -1,36 +1,16 @@
 import SwiftUI
 
-enum RecipeCardState: Identifiable {
-    case waiting(index: Int, text: String, timerTotal: Second)
-    case running(index: Int, text: String, timerCurrent: Second, timerTotal: Second)
-    case complete(index: Int, text: String)
+struct RecipeCardState: Identifiable {
+    let index: Int
+    let text: String
+    let isLastStep: Bool
+    let timerState: RecipeTimerState
 
     var id: String {
-        switch self {
-        case let .waiting(index, _, _): String("waiting_\(index)")
-        case let .running(index, _, current, _): String("running_\(index)_\(current.value)")
-        case let .complete(index, _): String("complete_\(index)")
-        }
-    }
-
-    var timerState: RecipeTimerState {
-        return switch self {
-        case let .waiting(_, _, total):
-            .waiting(seconds: total)
-        case let .running(_, _, current, total):
-            .running(
-                seconds: current,
-                progress: Double(total.value - current.value) / Double(total.value)
-            )
-        case .complete: .complete
-        }
-    }
-
-    var text: String {
-        return switch self {
-        case let .waiting(_, text, _): text
-        case let .running(_, text, _, _): text
-        case let .complete(_, text): text
+        switch timerState {
+        case .waiting: String("waiting_\(index)")
+        case let .running(_, current): String("running_\(index)_\(current.value)")
+        case .complete: String("complete_\(index)")
         }
     }
 }
@@ -71,20 +51,11 @@ struct RecipeCardConnector: View {
     VStack(spacing: 0) {
         Spacer()
         RecipeCard(
-            state: .complete(index: 0, text: "20秒間かけて\n湯を40g注ぎましょう")
-        )
-        .padding(.horizontal, 16.0)
-        RecipeCardConnector(
-            color: Color.themeBeigeLight,
-            width: 12.0,
-            height: 16.0
-        )
-        RecipeCard(
-            state: .running(
-                index: 1,
-                text: "20秒間待ちましょう",
-                timerCurrent: Second(16),
-                timerTotal: Second(20)
+            state: RecipeCardState(
+                index: 0,
+                text: "20秒間かけて\n湯を40g注ぎましょう",
+                isLastStep: false,
+                timerState: .complete
             )
         )
         .padding(.horizontal, 16.0)
@@ -94,10 +65,25 @@ struct RecipeCardConnector: View {
             height: 16.0
         )
         RecipeCard(
-            state: .waiting(
+            state: RecipeCardState(
+                index: 1,
+                text: "20秒間待ちましょう",
+                isLastStep: false,
+                timerState: .running(total: Second(20), current: Second(16))
+            )
+        )
+        .padding(.horizontal, 16.0)
+        RecipeCardConnector(
+            color: Color.themeBeigeLight,
+            width: 12.0,
+            height: 16.0
+        )
+        RecipeCard(
+            state: RecipeCardState(
                 index: 2,
                 text: "全量が100gになるまで\n20秒間かけて\n湯を60g注ぎましょう",
-                timerTotal: Second(20)
+                isLastStep: true,
+                timerState: .waiting(total: Second(20))
             )
         )
         .padding(.horizontal, 16.0)

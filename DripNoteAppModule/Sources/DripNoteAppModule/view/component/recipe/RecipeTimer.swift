@@ -1,14 +1,14 @@
 import SwiftUI
 
 enum RecipeTimerState {
-    case waiting(seconds: Second)
-    case running(seconds: Second, progress: Double)
+    case waiting(total: Second)
+    case running(total: Second, current: Second)
     case complete
 
     func getProgress() -> Double {
         return switch self {
         case .waiting: 0.0
-        case let .running(_, progress): progress
+        case let .running(total, current): Double(current.value) / Double(total.value)
         case .complete: 1.0
         }
     }
@@ -59,13 +59,13 @@ struct RecipeTimer: View {
 
 #Preview {
     VStack(spacing: 16.0) {
-        RecipeTimer(state: .running(seconds: Second(20), progress: 0.0),
+        RecipeTimer(state: .running(total: Second(20), current: Second(0)),
                     size: 64.0)
-        RecipeTimer(state: .running(seconds: Second(20), progress: 0.2),
+        RecipeTimer(state: .running(total: Second(20), current: Second(4)),
                     size: 64.0)
-        RecipeTimer(state: .running(seconds: Second(20), progress: 0.7),
+        RecipeTimer(state: .running(total: Second(20), current: Second(16)),
                     size: 64.0)
-        RecipeTimer(state: .running(seconds: Second(20), progress: 1.0),
+        RecipeTimer(state: .running(total: Second(20), current: Second(20)),
                     size: 64.0)
     }
 }
