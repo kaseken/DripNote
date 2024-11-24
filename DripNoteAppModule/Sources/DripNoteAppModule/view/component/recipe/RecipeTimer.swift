@@ -38,8 +38,8 @@ struct RecipeTimer: View {
                 .rotationEffect(.degrees(-90))
 
             switch state {
-            case let .running(seconds, _):
-                Text(String(seconds.value))
+            case let .running(total, current):
+                Text(String(total.value - current.value))
                     .font(.system(size: 16.0))
                     .foregroundStyle(Color.grayText)
                     .fontWeight(.bold)

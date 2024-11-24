@@ -13,7 +13,15 @@ struct Recipe {
 enum RecipeStep {
     case drip(water: Gram, seconds: Second)
     case wait(for: Second)
-    case waitUntilDripped
+    case waitUntilDripped(atLeast: Second)
+
+    var duration: Second {
+        return switch self {
+        case let .drip(_, seconds): seconds
+        case let .wait(seconds): seconds
+        case let .waitUntilDripped(seconds): seconds
+        }
+    }
 }
 
 let kDefaultRecipe = Recipe(
@@ -29,7 +37,7 @@ let kDefaultRecipe = Recipe(
         .drip(water: Gram(50), seconds: Second(20)),
         .wait(for: Second(15)),
         .drip(water: Gram(50), seconds: Second(20)),
-        .waitUntilDripped,
+        .waitUntilDripped(atLeast: Second(20)),
     ],
     // Sunday, November 17, 2024 8:32:50 AM
     updatedAt: Date(timeIntervalSince1970: 1_731_832_370),
