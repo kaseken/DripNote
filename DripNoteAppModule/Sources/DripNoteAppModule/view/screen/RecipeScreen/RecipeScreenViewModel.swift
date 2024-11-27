@@ -5,6 +5,7 @@ enum RecipeScreenUIState {
     case loading
     case idle(recipe: Recipe)
     case running(recipe: Recipe, elapsedTime: Second)
+    case finished
 }
 
 final class RecipeScreenViewModel: ObservableObject {
@@ -48,5 +49,16 @@ final class RecipeScreenViewModel: ObservableObject {
         guard case let .running(recipe, _) = uiState else { return }
         clearTimer()
         uiState = .idle(recipe: recipe)
+    }
+
+    func onFinishTapped() {
+        guard case let .running(recipe, _) = uiState else { return }
+        clearTimer()
+        uiState = .finished
+    }
+
+    func onBackTapped() {
+        guard case .finished = uiState else { return }
+        uiState = .idle(recipe: kDefaultRecipe)
     }
 }

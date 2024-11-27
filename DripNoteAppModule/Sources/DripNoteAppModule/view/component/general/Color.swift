@@ -17,6 +17,7 @@ struct Color {
     static let themeNavyDark = Self.rgb(75, 101, 135) // #4B6587
 
     // Gray
+    static let themeGrayLight = Self.rgb(213, 211, 203) // #D5D3CB
     static let themeGray = Self.rgb(200, 198, 198) // #C8C6C6
     static let themeGrayDark = Self.rgb(145, 142, 130) // #918E82
 

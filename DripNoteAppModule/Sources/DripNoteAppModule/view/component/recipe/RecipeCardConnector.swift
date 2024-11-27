@@ -9,6 +9,6 @@ struct RecipeCardConnector: View {
         } else {
             Color.themeBeigeLight
         }
-        Rectangle().foregroundStyle(color).frame(width: 16.0, height: 16.0)
+        Rectangle().foregroundStyle(color).frame(width: 12.0, height: 16.0)
     }
 }

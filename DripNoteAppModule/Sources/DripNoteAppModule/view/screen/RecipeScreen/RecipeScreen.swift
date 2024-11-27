@@ -28,8 +28,11 @@ struct RecipeScreen: View {
                 RunningRecipeScreen(
                     recipe: recipe,
                     elapsedTime: elapsedTime,
-                    onAbortTapped: viewModel.onAbortTapped
+                    onAbortTapped: viewModel.onAbortTapped,
+                    onFinishTapped: viewModel.onFinishTapped
                 )
+            case .finished:
+                FinishedRecipeScreen(onBackTapped: viewModel.onBackTapped)
             }
         }
     }
