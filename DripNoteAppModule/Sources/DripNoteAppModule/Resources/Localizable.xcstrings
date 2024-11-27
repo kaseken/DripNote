@@ -1,7 +1,7 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
+    "%lld g" : {
 
     },
     "button_back" : {
@@ -68,6 +68,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "お疲れさまでした\n美味しいコーヒーをどうぞ"
+          }
+        }
+      }
+    },
+    "start_drip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ドリップ開始"
           }
         }
       }

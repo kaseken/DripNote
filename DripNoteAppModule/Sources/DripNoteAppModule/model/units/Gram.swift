@@ -1,10 +1,14 @@
 import Foundation
 
-struct Gram: Hashable {
+struct Gram {
     let value: Int
 
     init(_ value: Int) {
         self.value = value
+    }
+
+    static func == (lhs: Gram, rhs: Gram) -> Bool {
+        lhs.value == rhs.value
     }
 
     static func + (lhs: Gram, rhs: Gram) -> Gram {

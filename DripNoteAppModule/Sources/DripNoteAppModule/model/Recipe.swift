@@ -12,6 +12,7 @@ struct Recipe {
     // The time will be identical whereas the water weight will be changed.
     func with(beanWeight: Gram) -> Recipe {
         assert(beanWeight.value > 0)
+        if beanWeight == self.beanWeight { return self }
         let scale = Double(beanWeight.value) / Double(max(self.beanWeight.value, 1))
         return Recipe(
             id: id,

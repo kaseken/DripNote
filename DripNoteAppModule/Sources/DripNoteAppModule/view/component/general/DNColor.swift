@@ -22,5 +22,6 @@ enum DNColor {
     static let themeGrayDark = Self.rgb(145, 142, 130) // #918E82
 
     // Text colors
+    static let blackText = Self.rgb(51, 51, 51) // #333333
     static let grayText = Self.rgb(102, 102, 102) // #666666
 }

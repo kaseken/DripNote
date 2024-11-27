@@ -2,12 +2,12 @@ import SwiftUI
 
 struct IdleRecipeScreen: View {
     let recipe: Recipe
-    let onStartTapped: () -> Void
+    let onStartTapped: (Gram) -> Void
     let onMenuTapped: () -> Void
     let onSettingsTapped: () -> Void
 
     @State private var isStartDialogOpen: Bool = false
-    @State private var beanWeight: Gram? = nil
+    @State private var chosenBeanWeight: Int? = nil
 
     var body: some View {
         ZStack {
@@ -57,7 +57,7 @@ struct IdleRecipeScreen: View {
                         foregroundColor: DNColor.white,
                         backgroundColor: DNColor.themeNavyDark,
                         borderColor: nil,
-                        onClick: onStartTapped
+                        onClick: { isStartDialogOpen = true }
                     )
                     .shadow(radius: 8.0)
                     .padding(.all, 16.0)
@@ -69,30 +69,57 @@ struct IdleRecipeScreen: View {
                 ZStack {
                     Color.black.opacity(0.5)
                         .edgesIgnoringSafeArea(.all)
-                    VStack(alignment: .center, spacing: 16.0) {
+                    VStack(alignment: .center, spacing: 24.0) {
                         HStack {
-                            Button(action: {
-                                isStartDialogOpen.toggle()
-                            }) {
+                            Spacer()
+                            Button(action: { isStartDialogOpen = false }) {
                                 Image(systemName: "multiply")
                                     .font(.system(size: 24.0))
                                     .foregroundStyle(DNColor.themeGrayDark)
                             }
+                            Spacer().frame(width: 8.0)
                         }
+                        .padding(.top, 8.0)
                         Text(String(localized: "choose_bean_weight", bundle: Bundle.module))
                             .foregroundStyle(DNColor.grayText)
                             .font(.system(size: 16.0, weight: .bold))
 
-                        Picker(
-                            "",
-                            selection: Binding<Gram>(
-                                get: { beanWeight ?? recipe.beanWeight },
-                                set: { beanWeight = $0 }
-                            )
-                        ) {}
+                        Menu {
+                            ForEach((10 ..< 41).reversed(), id: \.self) { value in
+                                Button(action: {
+                                    chosenBeanWeight = value
+                                }) {
+                                    Text("\(value) g")
+                                        .font(.system(size: 16.0, weight: .bold))
+                                        .foregroundStyle(DNColor.blackText)
+                                }
+                            }
+                        } label: {
+                            Text("\(chosenBeanWeight ?? recipe.beanWeight.value) g")
+                                .font(.system(size: 16.0, weight: .bold))
+                                .foregroundStyle(DNColor.blackText)
+                                .padding(.horizontal, 32.0)
+                                .padding(.vertical, 16.0)
+                                .background(DNColor.backgroundWhite)
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 8.0)
+                                        .stroke(DNColor.grayText, lineWidth: 1.0)
+                                }
+                                .cornerRadius(8.0)
+                        }
+
+                        TextButton(
+                            label: String(localized: "start_drip", bundle: Bundle.module),
+                            style: .primary,
+                            action: {
+                                onStartTapped(Gram(chosenBeanWeight ?? recipe.beanWeight.value))
+                            }
+                        )
+                        .padding(.bottom, 32.0)
                     }
                     .background(DNColor.backgroundBeige)
                     .cornerRadius(16.0)
+                    .padding(.all, 32.0)
                 }
             }
         }
@@ -102,7 +129,7 @@ struct IdleRecipeScreen: View {
 #Preview {
     IdleRecipeScreen(
         recipe: kDefaultRecipe,
-        onStartTapped: {},
+        onStartTapped: { _ in },
         onMenuTapped: {},
         onSettingsTapped: {}
     )
