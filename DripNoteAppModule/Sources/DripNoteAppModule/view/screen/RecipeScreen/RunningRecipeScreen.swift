@@ -2,6 +2,7 @@ import SwiftUI
 
 struct RunningRecipeScreen: View {
     private static let finishButtonId = "FINISH_BUTTON"
+
     let recipe: Recipe
     let elapsedTime: Second
     let onAbortTapped: () -> Void
