@@ -13,14 +13,14 @@ struct RecipeListScreen: View {
                     }) {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 24.0))
-                            .foregroundStyle(Color.themeGrayDark)
+                            .foregroundStyle(DNColor.themeGrayDark)
                     }
                     Spacer()
                 }
             }
             ScrollView {}
         }
-        .background(Color.backgroundBeige)
+        .background(DNColor.backgroundBeige)
         // Hide default back button.
         .navigationBarBackButtonHidden(true)
     }

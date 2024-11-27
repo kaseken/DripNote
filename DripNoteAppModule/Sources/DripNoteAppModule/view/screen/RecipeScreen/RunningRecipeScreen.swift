@@ -27,7 +27,7 @@ struct RunningRecipeScreen: View {
                     Button(action: onAbortTapped) {
                         Image(systemName: "multiply")
                             .font(.system(size: 24.0))
-                            .foregroundStyle(Color.themeGrayDark)
+                            .foregroundStyle(DNColor.themeGrayDark)
                     }
                     Spacer()
                 }
@@ -69,7 +69,7 @@ struct RunningRecipeScreen: View {
                 }
             }
         }
-        .background(Color.backgroundBeige)
+        .background(DNColor.backgroundBeige)
     }
 }
 

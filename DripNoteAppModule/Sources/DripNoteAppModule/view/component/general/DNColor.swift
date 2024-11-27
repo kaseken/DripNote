@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Color {
+enum DNColor {
     private static func rgb(_ r: Int, _ g: Int, _ b: Int) -> SwiftUI.Color {
         return SwiftUI.Color(red: Double(r) / 255.0, green: Double(g) / 255.0, blue: Double(b) / 255.0)
     }

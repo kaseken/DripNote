@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "button_back" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -14,6 +17,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "戻る"
+          }
+        }
+      }
+    },
+    "choose_bean_weight" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How much coffee beans will you use?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コーヒー豆の量は？"
           }
         }
       }

@@ -24,14 +24,14 @@ struct RecipeTimer: View {
         ZStack(alignment: .center) {
             Circle()
                 .stroke(
-                    Color.themeNavyDark,
+                    DNColor.themeNavyDark,
                     lineWidth: Self.barWidth
                 )
                 .frame(width: size, height: size)
             Circle()
                 .trim(from: 0.0, to: state.getProgress())
                 .stroke(
-                    Color.themeGray,
+                    DNColor.themeGray,
                     lineWidth: Self.barWidth
                 )
                 .frame(width: size, height: size)
@@ -41,17 +41,17 @@ struct RecipeTimer: View {
             case let .running(total, current):
                 Text(String(total.value - current.value))
                     .font(.system(size: 16.0))
-                    .foregroundStyle(Color.grayText)
+                    .foregroundStyle(DNColor.grayText)
                     .fontWeight(.bold)
             case let .waiting(seconds):
                 Text(String(seconds.value))
                     .font(.system(size: 16.0))
-                    .foregroundStyle(Color.grayText)
+                    .foregroundStyle(DNColor.grayText)
                     .fontWeight(.bold)
             case .complete:
                 Image(systemName: "checkmark")
                     .font(.system(size: 16.0))
-                    .foregroundStyle(Color.grayText)
+                    .foregroundStyle(DNColor.grayText)
             }
         }
         .frame(width: size, height: size)

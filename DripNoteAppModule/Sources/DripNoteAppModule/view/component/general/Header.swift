@@ -13,11 +13,11 @@ struct Header<Content: View>: View {
         }
         .frame(height: 48.0)
         .frame(maxWidth: .infinity)
-        .background(Color.backgroundBeige)
+        .background(DNColor.backgroundBeige)
         .overlay(
             Rectangle()
                 .frame(height: 1)
-                .foregroundColor(Color.themeGray),
+                .foregroundColor(DNColor.themeGray),
             alignment: .bottom
         )
     }
@@ -33,13 +33,13 @@ struct Header<Content: View>: View {
         Button(action: {}) {
             Image(systemName: "list.dash")
                 .font(.system(size: 24.0))
-                .foregroundStyle(Color.themeGrayDark)
+                .foregroundStyle(DNColor.themeGrayDark)
         }
         Spacer()
         Button(action: {}) {
             Image(systemName: "gearshape")
                 .font(.system(size: 24.0))
-                .foregroundStyle(Color.themeGrayDark)
+                .foregroundStyle(DNColor.themeGrayDark)
         }
         Spacer().frame(width: 16.0)
     }

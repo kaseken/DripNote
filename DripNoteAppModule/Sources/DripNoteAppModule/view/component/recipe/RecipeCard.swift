@@ -25,12 +25,12 @@ struct RecipeCard: View {
             Text(state.text)
                 .font(.system(size: 16.0))
                 .fontWeight(.regular)
-                .foregroundStyle(Color.grayText)
+                .foregroundStyle(DNColor.grayText)
                 .lineSpacing(4.0)
             Spacer()
         }
         .frame(maxWidth: .infinity, minHeight: 96)
-        .background(Color.backgroundWhite)
+        .background(DNColor.backgroundWhite)
         .cornerRadius(8.0)
     }
 }
@@ -71,5 +71,5 @@ struct RecipeCard: View {
         .padding(.horizontal, 16.0)
         Spacer()
     }
-    .background(Color.backgroundBeige)
+    .background(DNColor.backgroundBeige)
 }

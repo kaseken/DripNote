@@ -12,23 +12,23 @@ struct TextButton: View {
 
     private var textColor: SwiftUI.Color {
         if action == nil {
-            return Color.white
+            return DNColor.white
         }
-        return style == .primary ? Color.white : Color.themeNavyDark
+        return style == .primary ? DNColor.white : DNColor.themeNavyDark
     }
 
     private var backgroundColor: SwiftUI.Color {
         if action == nil {
-            return Color.themeGrayLight
+            return DNColor.themeGrayLight
         }
-        return style == .primary ? Color.themeNavyDark : Color.white
+        return style == .primary ? DNColor.themeNavyDark : DNColor.white
     }
 
     private var borderColor: SwiftUI.Color {
         if action == nil {
             return SwiftUI.Color.clear
         }
-        return style == .primary ? SwiftUI.Color.clear : Color.themeNavyDark
+        return style == .primary ? SwiftUI.Color.clear : DNColor.themeNavyDark
     }
 
     var body: some View {

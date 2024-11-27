@@ -13,17 +13,15 @@ public struct RootView: View {
         NavigationStack(path: $path) {
             ZStack {
                 // Updates color of safe-area.
-                Color.backgroundBeige.edgesIgnoringSafeArea(.all)
-                VStack {
-                    RecipeScreen(onMenuTapped: { path.append(.recipeList) })
-                    Spacer()
-                }
-                .navigationDestination(for: NavigationPath.self) { path in
-                    switch path {
-                    case .recipeList:
-                        RecipeListScreen(path: $path)
+                DNColor.backgroundBeige.edgesIgnoringSafeArea(.all)
+                RecipeScreen(onMenuTapped: { path.append(.recipeList) })
+                    .edgesIgnoringSafeArea(.bottom)
+                    .navigationDestination(for: NavigationPath.self) { path in
+                        switch path {
+                        case .recipeList:
+                            RecipeListScreen(path: $path)
+                        }
                     }
-                }
             }
         }
     }
