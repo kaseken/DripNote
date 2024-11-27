@@ -37,7 +37,8 @@ struct TextButton: View {
                 .font(.headline)
                 .foregroundColor(textColor)
                 .padding(.vertical, 12.0)
-                .padding(.horizontal, 24.0)
+                .padding(.horizontal, 36.0)
+                .frame(minWidth: 160)
                 .background(backgroundColor)
                 .cornerRadius(16)
                 .overlay {
