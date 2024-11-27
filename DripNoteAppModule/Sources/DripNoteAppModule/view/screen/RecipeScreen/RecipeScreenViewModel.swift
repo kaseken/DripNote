@@ -35,7 +35,7 @@ final class RecipeScreenViewModel: ObservableObject {
 
     func onStartTapped(beanWeight: Gram) {
         guard case let .idle(recipe) = uiState else { return }
-        let adjustedRecipe = recipe.with(beanWeight: beanWeight)
+        let adjustedRecipe = recipe.with(chosenBeanWeight: beanWeight)
         timer = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in

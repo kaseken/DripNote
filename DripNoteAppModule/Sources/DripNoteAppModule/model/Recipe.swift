@@ -10,14 +10,14 @@ struct Recipe {
 
     // Returns the same recipe for different bean weight.
     // The time will be identical whereas the water weight will be changed.
-    func with(beanWeight: Gram) -> Recipe {
-        assert(beanWeight.value > 0)
-        if beanWeight == self.beanWeight { return self }
-        let scale = Double(beanWeight.value) / Double(max(self.beanWeight.value, 1))
+    func with(chosenBeanWeight: Gram) -> Recipe {
+        assert(chosenBeanWeight.value > 0)
+        if chosenBeanWeight == beanWeight { return self }
+        let scale = Double(chosenBeanWeight.value) / Double(max(beanWeight.value, 1))
         return Recipe(
             id: id,
             name: name,
-            beanWeight: beanWeight,
+            beanWeight: chosenBeanWeight,
             steps: steps.map { $0.weightMultiplied(by: scale) },
             updatedAt: updatedAt,
             createdAt: createdAt

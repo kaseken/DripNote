@@ -85,7 +85,8 @@ struct IdleRecipeScreen: View {
                             .font(.system(size: 16.0, weight: .bold))
 
                         Menu {
-                            ForEach((10 ..< 41).reversed(), id: \.self) { value in
+                            // TODO: Make min/max bean weight configurable.
+                            ForEach((10 ..< 31).reversed(), id: \.self) { value in
                                 Button(action: {
                                     chosenBeanWeight = value
                                 }) {
