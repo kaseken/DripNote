@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Color {
+enum DNColor {
     private static func rgb(_ r: Int, _ g: Int, _ b: Int) -> SwiftUI.Color {
         return SwiftUI.Color(red: Double(r) / 255.0, green: Double(g) / 255.0, blue: Double(b) / 255.0)
     }
@@ -22,5 +22,6 @@ struct Color {
     static let themeGrayDark = Self.rgb(145, 142, 130) // #918E82
 
     // Text colors
+    static let blackText = Self.rgb(51, 51, 51) // #333333
     static let grayText = Self.rgb(102, 102, 102) // #666666
 }

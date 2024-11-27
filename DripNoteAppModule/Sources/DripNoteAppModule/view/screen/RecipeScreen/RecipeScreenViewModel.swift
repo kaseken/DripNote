@@ -33,16 +33,17 @@ final class RecipeScreenViewModel: ObservableObject {
         uiState = .idle(recipe: kDefaultRecipe)
     }
 
-    func onStartTapped() {
+    func onStartTapped(beanWeight: Gram) {
         guard case let .idle(recipe) = uiState else { return }
+        let adjustedRecipe = recipe.with(chosenBeanWeight: beanWeight)
         timer = Timer.publish(every: 1, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
                 guard let self = self else { return }
                 elapsedTime = Second(min(elapsedTime.value + 1, Int.max))
-                uiState = .running(recipe: recipe, elapsedTime: elapsedTime)
+                uiState = .running(recipe: adjustedRecipe, elapsedTime: elapsedTime)
             }
-        uiState = .running(recipe: recipe, elapsedTime: Second(0))
+        uiState = .running(recipe: adjustedRecipe, elapsedTime: Second(0))
     }
 
     func onAbortTapped() {
@@ -52,7 +53,7 @@ final class RecipeScreenViewModel: ObservableObject {
     }
 
     func onFinishTapped() {
-        guard case let .running(recipe, _) = uiState else { return }
+        guard case .running = uiState else { return }
         clearTimer()
         uiState = .finished
     }

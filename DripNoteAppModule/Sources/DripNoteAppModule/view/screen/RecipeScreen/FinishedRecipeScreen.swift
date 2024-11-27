@@ -13,12 +13,12 @@ struct FinishedRecipeScreen: View {
             )
             .font(.system(size: 20, weight: .bold))
             .lineSpacing(8.0)
-            .foregroundStyle(Color.grayText)
+            .foregroundStyle(DNColor.grayText)
             .multilineTextAlignment(.center)
             Image("CoffeeIcon", bundle: .module)
                 .resizable()
                 .frame(width: 48, height: 48)
-                .foregroundStyle(Color.grayText)
+                .foregroundStyle(DNColor.grayText)
                 .padding(.top, 24.0)
                 .padding(.bottom, 64.0)
             TextButton(
@@ -28,7 +28,7 @@ struct FinishedRecipeScreen: View {
             )
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.backgroundBeige)
+        .background(DNColor.backgroundBeige)
     }
 }
 

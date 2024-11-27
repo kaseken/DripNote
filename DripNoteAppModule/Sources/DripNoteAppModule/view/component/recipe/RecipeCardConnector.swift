@@ -5,9 +5,9 @@ struct RecipeCardConnector: View {
 
     var body: some View {
         let color = if case .complete = previousTimerState {
-            Color.themeGray
+            DNColor.themeGray
         } else {
-            Color.themeBeigeLight
+            DNColor.themeBeigeLight
         }
         Rectangle().foregroundStyle(color).frame(width: 12.0, height: 16.0)
     }

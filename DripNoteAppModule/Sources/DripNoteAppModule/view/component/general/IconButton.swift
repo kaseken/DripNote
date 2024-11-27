@@ -29,17 +29,17 @@ struct IconButton: View {
         IconButton(
             iconSystemName: "play.fill",
             size: 72.0,
-            foregroundColor: Color.white,
-            backgroundColor: Color.themeNavyDark,
+            foregroundColor: DNColor.white,
+            backgroundColor: DNColor.themeNavyDark,
             borderColor: nil,
             onClick: {}
         )
         IconButton(
             iconSystemName: "plus",
             size: 72.0,
-            foregroundColor: Color.themeNavyDark,
-            backgroundColor: Color.white,
-            borderColor: Color.themeNavyDark,
+            foregroundColor: DNColor.themeNavyDark,
+            backgroundColor: DNColor.white,
+            borderColor: DNColor.themeNavyDark,
             onClick: {}
         )
     }
