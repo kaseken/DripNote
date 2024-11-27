@@ -59,7 +59,6 @@ struct RunningRecipeScreen: View {
                     .padding(.horizontal, 16.0)
                     .padding(.vertical, 16.0)
                 }
-                .scrollDisabled(true)
                 .onChange(of: currentIndex) {
                     withAnimation {
                         if let currentIndex {
